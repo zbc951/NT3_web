@@ -227,8 +227,8 @@
                             height: 14px;
                         }
                         &.invite_ic {
-                            width: 15px;
-                            height: 15px;
+                            width: 20px;
+                            height: 20px;
                         }
                     }
                 }
@@ -553,8 +553,8 @@
                     display: none;
                     width: 100%;
                     height: auto;
-                    background: $backgroundColor_3;
-                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    background: $mainBG_1;
+                    box-shadow: 0px 5px 10px -5px $mainShadow_1;
                     border-radius: 5px;
                     box-sizing: border-box;
                     padding: 20px 24px;
@@ -1610,7 +1610,7 @@
                         height: 307px;
                         align-items: center;
                         justify-content: center;
-                        color: $fontColor_7;
+                        color: $title_3;
                         font-weight: bold;
                         letter-spacing: 1px;
 
@@ -2236,7 +2236,7 @@
                                         height: 50px;
                                         vertical-align: middle;
                                         letter-spacing: 1px;
-                                        color: $fontColor_2;
+                                        color: $title_1;
                                         border-bottom: solid 2px $mainBorder_2;
                                         font-size: 13px;
                                         font-weight: bold;
@@ -2708,6 +2708,7 @@
                             border-bottom: solid 1px $mainBorder_2; 
 
                             p {
+                                color: $title_1 !important;
                                 
                                 &::before {
                                     display: none;
@@ -2867,7 +2868,7 @@
                 align-items: center;
                 justify-content: center;
                 letter-spacing: 1px;
-                color: $fontColor_7;
+                color: $title_3;
                 font-weight: bold;
 
                 &.display {
@@ -3725,6 +3726,235 @@
         }
 
         //邀請會員
-        
+        .inviteWrap {
+            width: 1140px;
+            height: auto;
+            background: $mainBG_1;
+            box-shadow: 0 5px 10px -5px $mainShadow_1;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 20px;
+
+            .title {
+                color: $title_2;
+                font-size: 20px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+
+                .left {
+                    width: auto;
+                    height: auto;
+
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        height: 50px;
+                        
+                        p {
+                            font-size: 14px;
+                            font-weight: bold;
+
+                            &:nth-of-type(1) {
+                                width: 80px;
+                                color: $title_2;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 190px;
+                                color: $mainFont_1;
+
+                                input {
+                                    width: 100%;
+                                    height: 36px;
+                                    @include mainInput;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: auto;
+                            height: 36px;
+                            @include borderBtn;
+                            padding: 0 5px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+                    width: 300px;
+                    justify-content: space-between;
+                    margin-right: 200px;
+
+                    p {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $title_2;
+                        line-height: 18px;
+                    }
+
+                    div {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            .mainImg {
+                width: 100%;
+                height: 505px;
+                margin: 20px 0;
+            }
+
+            .wordBox {
+                width: auto;
+                height: auto;
+
+                p {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $mainFont_1;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+        //查詢紅利
+        .pointWrap {
+            width: 1140px;
+            height: auto;
+            background: $mainBG_1;
+            box-shadow: 0 5px 10px -5px $mainShadow_1;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            .title {
+                color: $title_2;
+                font-size: 20px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                padding: 20px 20px 0;
+                box-sizing: border-box;
+            }
+
+            .searchBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                margin-top: 30px;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 0 20px;
+
+                .left {
+                    display: flex;
+
+                    .inputBox {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        color: $title_2;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin-right: 15px;
+    
+                        input {
+                            width: 250px;
+                            height: 36px;
+                            @include mainInput;
+                            margin-left: 20px;
+                        }
+                    }
+    
+                    .btnBox {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+    
+                        button {
+                            width: 70px;
+                            height: 36px;
+                            @include changeBtn;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+
+                .check {
+                    width: 140px;
+                    height: 36px;
+                    @include mainBtn;
+                }
+            }
+
+            hr {
+                margin: 15px 0;
+            }
+
+            table {
+                width: 92%;
+                height: auto;
+                margin: 0 auto;
+
+                tr {
+                    border-bottom: solid 1px $mainBorder_1;
+
+                    &:nth-of-type(1) {
+                        border: none;
+                    }
+
+                    th {
+                        vertical-align: middle;
+                        height: 40px;
+                        border-bottom: solid 2px $mainBorder_2;
+
+                        p {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: $title_1;
+                        }
+                    }
+
+                    td {
+                        width: 25%;
+                        vertical-align: middle;
+                        height: 40px;
+
+                        &:last-child {
+
+                            p {
+                                border: none;
+                            }
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: $mainFont_1;
+                            text-align: center;
+                            border-right: solid 1px $mainBorder_1;
+
+                            &.open {
+                                text-decoration: underline;
+                                color: $remind_sp2;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

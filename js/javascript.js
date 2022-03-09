@@ -197,6 +197,11 @@ $(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.betWindow.lotteryGame').addClass('display');
     })
+
+    $(".pointWrap .open").click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.pointWindow').addClass('display');
+    })
 })
 function unlogin(){
     $('.jumpWindow').removeClass('display');
